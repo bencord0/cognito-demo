@@ -131,6 +131,7 @@ SOCIALACCOUNT_PROVIDERS = {
 # Disable Email Notifications
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 SOCIALACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'http' if DEBUG else 'https'
 LOGIN_REDIRECT_URL = '/'
 
 # Internationalization
