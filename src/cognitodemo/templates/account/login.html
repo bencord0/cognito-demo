@@ -1,0 +1,17 @@
+{% load account socialaccount %}
+
+<h1>Sign In</h1>
+
+{% get_providers as socialaccount_providers %}
+
+<p>Please sign in with the following provider</p>
+
+<div class="socialaccount_ballot">
+
+  <ul class="socialaccount_providers">
+    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+  </ul>
+
+</div>
+
+{% include "socialaccount/snippets/login_extra.html" %}

@@ -1,0 +1,9 @@
+Signed in as {{ user.username }}
+
+<ul>
+  <li><a href="{% url 'console_signin' %}">Sign in to AWS Console (ReadOnlyAccess)</a></li>
+</ul>
+
+<div>
+<a href="{% url 'account_logout' %}">Sign out</a>
+</div>

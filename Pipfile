@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+cognito-demo = { editable = true, path = "./" }
+
+boto3 = "*"
+django = "*"
+django-allauth = { git = "https://github.com/bencord0/django-allauth.git", editable = true }
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
