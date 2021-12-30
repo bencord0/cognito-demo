@@ -4,7 +4,7 @@ setup(
     name='cognito-demo',
     packages=find_packages(where="src"),
     package_dir={"": "src"},
-    package_data={"cognito-demo": [
+    package_data={"cognitodemo": [
         "static/*/*",
         "templates/*",
     ]},
