@@ -5,10 +5,10 @@ name = "pypi"
 
 [packages]
 cognito-demo = { editable = true, path = "./" }
-
 boto3 = "*"
 django = "*"
 django-allauth = { git = "https://github.com/bencord0/django-allauth.git", editable = true }
+dj-database-url = "*"
 
 [dev-packages]
 

@@ -8,9 +8,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import dj_database_url
 import os
 import secrets
 from pathlib import Path
+
+try:
+    from psycopg2cffi import compat
+    compat.register()
+except ImportError:
+    pass
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -83,10 +90,8 @@ WSGI_APPLICATION = 'cognitodemo.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=f'sqlite:///{BASE_DIR / "db.sqlite3"}')
 }
 
 
