@@ -7,5 +7,6 @@ setup(
     package_data={"cognitodemo": [
         "static/*/*",
         "templates/*",
+        "templates/*/*",
     ]},
 )
