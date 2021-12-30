@@ -9,6 +9,7 @@ boto3 = "*"
 django = "*"
 django-allauth = { git = "https://github.com/bencord0/django-allauth.git", editable = true }
 dj-database-url = "*"
+whitenoise = "*"
 
 [dev-packages]
 
