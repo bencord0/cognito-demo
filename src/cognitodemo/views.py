@@ -92,9 +92,6 @@ def refresh_token(token: SocialToken) -> SocialToken:
     token.id_token = new_tokens['id_token']
     new_expiry = datetime.now(timezone.utc) + timedelta(seconds=new_tokens['expires_in'])
     token.expiry = new_expiry
-
-    with transaction.atomic():
-        token.save()
-        id_token.save()
+    token.save()
 
     return token

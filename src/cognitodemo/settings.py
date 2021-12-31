@@ -131,8 +131,10 @@ SOCIALACCOUNT_PROVIDERS = {
 # Disable Email Notifications
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 SOCIALACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'http' if DEBUG else 'https'
 LOGIN_REDIRECT_URL = '/'
+
+# Set to 'https' in production, or redirect urls will be generated incorrectly
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = os.getenv('ACCOUNT_DEFAULT_HTTP_PROTOCOL', 'http')
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
